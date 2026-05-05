@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Albim</title>
+  <meta name="description" content="Abra o Albim para ver um album compartilhado e baixar o app se ainda nao tiver instalado.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero-card">
+      <div class="brand-wrap">
+        <img class="brand-logo" src="../assets/albimlogo.webp" alt="Albim" data-fallback-text="Albim">
+      </div>
+
+      <div class="eyebrow">Album compartilhado</div>
+      <h1 class="hero-title">Seu album da Copa, do seu jeito.</h1>
+      <p class="hero-copy">
+        Abra este link no Albim para ver as figurinhas disponiveis pra troca e acompanhar o progresso do album.
+      </p>
+
+      <div class="album-meta" id="album-meta">
+        <div class="meta-pill">
+          <span class="meta-label">Duplicadas</span>
+          <strong id="meta-duplicates">0</strong>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img class="hero-image" src="../assets/album_onboarding.webp" alt="Album Albim" data-fallback-text="Album Albim">
+      </div>
+
+      <div class="actions">
+        <a class="store-badge" id="ios-link" href="https://apps.apple.com/app/id0000000000" target="_blank" rel="noreferrer" aria-label="Download on the App Store">
+          <img class="store-badge-image" src="../assets/appstore.svg" alt="Download on the App Store">
+        </a>
+
+        <a class="store-badge" id="android-link" href="https://play.google.com/store/apps/details?id=app.mazarini.albim" target="_blank" rel="noreferrer" aria-label="Get it on Google Play">
+          <img class="store-badge-image" src="../assets/googleplay.svg" alt="Get it on Google Play">
+        </a>
+      </div>
+
+      <p class="helper-text" id="helper-text">
+        Se o app nao abrir automaticamente, use um dos botoes acima para instalar o Albim.
+      </p>
+    </section>
+  </main>
+
+  <script src="../app.js"></script>
+</body>
+</html>

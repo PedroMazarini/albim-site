@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "83S3GR549M.app.mazarini.albim"
+        ],
+        "components": [
+          {
+            "/": "/trade",
+            "?": {
+              "album": "*"
+            },
+            "comment": "Albim deep link with shared album payload"
+          },
+          {
+            "/": "/trade/*",
+            "comment": "Fallback coverage for nested trade routes"
+          }
+        ]
+      }
+    ]
+  }
+}
