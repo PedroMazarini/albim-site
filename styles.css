@@ -30,22 +30,26 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 24px 16px;
+  padding: 16px;
 }
 
 .hero-card {
   width: min(100%, 460px);
+  max-height: calc(100vh - 32px);
   background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: 32px;
   box-shadow: var(--shadow);
-  padding: 28px 22px 24px;
+  padding: 22px 18px 18px;
   text-align: center;
   backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .brand-wrap {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .brand-logo {
@@ -59,7 +63,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 8px 14px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   border-radius: 999px;
   background: var(--pill);
   color: var(--primary);
@@ -77,10 +81,10 @@ body {
 }
 
 .hero-copy {
-  margin: 14px auto 0;
+  margin: 10px auto 0;
   max-width: 32ch;
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 15px;
+  line-height: 1.45;
   color: var(--muted);
 }
 
@@ -89,7 +93,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 22px;
+  margin-top: 14px;
 }
 
 .meta-pill {
@@ -116,7 +120,7 @@ body {
 }
 
 .hero-image-wrap {
-  margin-top: 22px;
+  margin-top: 14px;
   overflow: hidden;
   background: transparent;
   border: 0;
@@ -126,6 +130,9 @@ body {
   display: block;
   width: 100%;
   height: auto;
+  max-height: min(27vh, 240px);
+  object-fit: contain;
+  margin: 0 auto;
   background: transparent;
   mix-blend-mode: multiply;
   filter: drop-shadow(0 24px 36px rgba(21, 101, 192, 0.18));
@@ -134,7 +141,7 @@ body {
 .actions {
   display: grid;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .store-badge {
@@ -157,9 +164,9 @@ body {
 }
 
 .helper-text {
-  margin: 18px 12px 0;
-  font-size: 14px;
-  line-height: 1.5;
+  margin: 14px 8px 0;
+  font-size: 13px;
+  line-height: 1.4;
   color: var(--muted);
 }
 
@@ -176,11 +183,15 @@ body {
 
 @media (max-width: 520px) {
   .hero-card {
-    padding: 24px 16px 20px;
+    padding: 18px 14px 16px;
     border-radius: 26px;
   }
 
   .store-badge-image {
-    height: 52px;
+    height: 50px;
+  }
+
+  .hero-image {
+    max-height: min(22vh, 180px);
   }
 }
