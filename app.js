@@ -31,12 +31,23 @@ function populateMetadata() {
   const total = numberOrDefault(params.get("total"), 0);
   const duplicates = numberOrDefault(params.get("duplicates"), 0);
 
-  document.getElementById("meta-user").textContent = username;
-  document.getElementById("meta-progress").textContent = `${owned} / ${total}`;
-  document.getElementById("meta-duplicates").textContent = `${duplicates}`;
+  const metaUser = document.getElementById("meta-user");
+  const metaProgress = document.getElementById("meta-progress");
+  const metaDuplicates = document.getElementById("meta-duplicates");
+  const helperText = document.getElementById("helper-text");
 
-  if (params.get("album")) {
-    document.getElementById("helper-text").textContent =
+  if (metaUser) {
+    metaUser.textContent = username;
+  }
+  if (metaProgress) {
+    metaProgress.textContent = `${owned} / ${total}`;
+  }
+  if (metaDuplicates) {
+    metaDuplicates.textContent = `${duplicates}`;
+  }
+
+  if (params.get("album") && helperText) {
+    helperText.textContent =
       "Esse link ja contem os dados do album. Se o Albim estiver instalado, ele deve abrir direto na troca.";
   }
 
