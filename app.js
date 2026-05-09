@@ -1,6 +1,6 @@
 const APP_CONFIG = {
   appName: "Albim",
-  iosUrl: "https://apps.apple.com/app/id0000000000",
+  iosUrl: "https://apps.apple.com/app/id6760141218",
   androidUrl: "https://play.google.com/store/apps/details?id=app.mazarini.albim",
 };
 
