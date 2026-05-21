@@ -14,6 +14,24 @@
           },
           {
             "/": "/trade"
+          },
+          {
+            "/": "/groupinvite/"
+          },
+          {
+            "/": "/groupinvite/*"
+          },
+          {
+            "/": "/groupinvite"
+          },
+          {
+            "/": "/friendinvite/"
+          },
+          {
+            "/": "/friendinvite/*"
+          },
+          {
+            "/": "/friendinvite"
           }
         ]
       }

@@ -6,6 +6,9 @@ This folder contains the Albim deeplink site for `albim.mazarini.app` and a mini
 
 - `index.html` for `mazarini.app`
 - `trade/index.html`
+- `groupinvite/index.html`
+- `friendinvite/index.html`
+- `404.html`
 - `styles.css`
 - `app.js`
 - `.well-known/apple-app-site-association`
@@ -30,7 +33,7 @@ This folder contains the Albim deeplink site for `albim.mazarini.app` and a mini
    - `Content-Type: application/json` for `assetlinks.json`
    - `Content-Type: application/json` or no forced extension mapping for `apple-app-site-association`
 6. Use `index.html` as the root page for `mazarini.app`.
-7. Use `trade/index.html` plus the shared `styles.css`, `app.js`, `.well-known`, and `assets/` files for `albim.mazarini.app`.
+7. Use `trade/index.html`, `groupinvite/index.html`, `friendinvite/index.html`, `404.html`, plus the shared `styles.css`, `app.js`, `.well-known`, and `assets/` files for `albim.mazarini.app`.
 
 ## Where to get the remaining values
 
@@ -64,3 +67,9 @@ The app generates links like:
 `https://albim.mazarini.app/trade/?album=...&user=...&owned=...&total=...&duplicates=...`
 
 The only required parameter is `album`.
+
+Invite links use these shapes:
+
+`https://albim.mazarini.app/groupinvite/GROUP_ID?groupname=sample%20gruoup`
+
+`https://albim.mazarini.app/friendinvite/FRIEND_ID?username=sample%20user`

@@ -26,6 +26,26 @@ function replaceBrokenImages() {
 
 function populateMetadata() {
   const params = new URLSearchParams(window.location.search);
+  const inviteMessage = document.getElementById("invite-message");
+
+  if (inviteMessage) {
+    const path = window.location.pathname;
+    const groupName = textOrDefault(params.get("groupname"), "your group");
+    const username = textOrDefault(params.get("username"), "Someone");
+
+    if (path === "/groupinvite" || path.includes("/groupinvite/")) {
+      inviteMessage.textContent = `You were invited to group ${groupName}`;
+      document.title = `${APP_CONFIG.appName} - Group invite`;
+      return;
+    }
+
+    if (path === "/friendinvite" || path.includes("/friendinvite/")) {
+      inviteMessage.textContent = `${username} invited you to follow his album`;
+      document.title = `${APP_CONFIG.appName} - Friend invite`;
+      return;
+    }
+  }
+
   const username = textOrDefault(params.get("user"), "Seu amigo");
   const owned = numberOrDefault(params.get("owned"), 0);
   const total = numberOrDefault(params.get("total"), 0);
@@ -57,8 +77,12 @@ function populateMetadata() {
 function applyStoreLinks() {
   const iosLink = document.getElementById("ios-link");
   const androidLink = document.getElementById("android-link");
-  iosLink.href = APP_CONFIG.iosUrl;
-  androidLink.href = APP_CONFIG.androidUrl;
+  if (iosLink) {
+    iosLink.href = APP_CONFIG.iosUrl;
+  }
+  if (androidLink) {
+    androidLink.href = APP_CONFIG.androidUrl;
+  }
 }
 
 replaceBrokenImages();
