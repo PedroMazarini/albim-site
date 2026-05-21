@@ -30,18 +30,18 @@ function populateMetadata() {
 
   if (inviteMessage) {
     const path = window.location.pathname;
-    const groupName = textOrDefault(params.get("groupname"), "your group");
-    const username = textOrDefault(params.get("username"), "Someone");
+    const groupName = textOrDefault(params.get("groupname"), "seu grupo");
+    const username = textOrDefault(params.get("username"), "Alguem");
 
     if (path === "/groupinvite" || path.includes("/groupinvite/")) {
-      inviteMessage.textContent = `You were invited to group ${groupName}`;
-      document.title = `${APP_CONFIG.appName} - Group invite`;
+      inviteMessage.textContent = `Voce foi convidado para o grupo ${groupName}`;
+      document.title = `${APP_CONFIG.appName} - Convite para grupo`;
       return;
     }
 
     if (path === "/friendinvite" || path.includes("/friendinvite/")) {
-      inviteMessage.textContent = `${username} invited you to follow his album`;
-      document.title = `${APP_CONFIG.appName} - Friend invite`;
+      inviteMessage.textContent = `${username} convidou voce para seguir o album dele`;
+      document.title = `${APP_CONFIG.appName} - Convite de amigo`;
       return;
     }
   }
